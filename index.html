@@ -18,39 +18,36 @@
     </style>
     <body>
         <header>
-            <h1> Hello and welcome to this PLE1&PBL2 practical Quiz</h1> <br><br>
-            <p>1.Respondant's Identification</p>
+            <h1> Hello and welcome to this PLE1&PBL2 practical Test</h1> <br><br>
+            <p>I.RESPONDANT'S IDENTIFICATION</p>
 
         </header>
-        <form name="quiz" id="quiz">
-            <input type="date">
+        <form name="connect.php" id="quiz" action="post">
+            <input type="date" name="date">
             <br><br>
             <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"> <br><br>
+            <input type="text" id="fname" name="firstName"> <br><br>
             <label for="lname">Last  name:</label>
-            <input type="text" id="lname" name="lname">
+            <input type="text" id="lname" name="lastName">
             <br><br>
             <label for="sector">Sector</label>
-            <select name="optone" class="selectDD form-control" style="width: 35%;" id="sectorsel" size="1">
-                <option value="" selected="selected">In which sector do you work?</option>
+            <select name="sectorName" class="selectDD form-control" style="width: 35%;" id="sectorsel" size="1">
+                <option value="" selected="selected">Sector</option>
             </select>
             <br>
             <br>
-            <label for="Cell">school</label>
-            <select name="opttwo" class="selectDD form-control" style="width: 35%;" id="cellsel" size="1">
-                <option value="" selected="selected">At which school do you teach?</option>
+            <label for="Cell">School</label>
+            <select name="schoolName" class="selectDD form-control" style="width: 35%;" id="cellsel" size="1">
+                <option value="" selected="selected">School</option>
             </select>
             <br>
             <br>
-            <label for="village">sbm-ssl</label>
-            <select name="optthree" class="selectDD form-control" style="width: 35%;" id="villagesel" size="1">
-                <option value="" selected="selected">Your role/responsibilities</option>
+            <label for="village">Function</label>
+            <select name="functionName" class="selectDD form-control" style="width: 35%;" id="villagesel" size="1">
+                <option value="" selected="selected">Function</option>
             </select>
             <br> <br>
-            <P>Gender</P>
-            <input type="radio" name="gender"/>Male <br>
-            <input type="radio" name="gender"/>Female
-            <br><br><br>
+           <P>II.QUETIONS</P> 
            
             <div>
                 <p>1.The UNCRC(United Nations Convention on the Rights of the Child focuses on Protecting children from phyisical violence Only.</p>
@@ -221,27 +218,42 @@
                 <p><input type="radio" name="question20" value="Strongly Disagree">Strongly Disagree</p>
                 <p><input type="radio" name="question20" value="I don'nt Know">I don'nt Know</p>
 
-                <input type="button" name="" value="I'm done!" onclick="check()" id="submitbutton">
+                <input type="button" name="save" value="I'm done!" onclick="check()" id="submitbutton">
             </form>
             <p id="result"></p>
             <script>
                 var sectorObject ={
                     "Mukarange":{
-                        "G.S Mukarange":["SBM","SSL"],
-                        "E.P Mburabuturo":["SBM","SSL"],
-                        "G.S Kayonza":["SBM","SSL"],
-                        "E.P Nyabubare":["SBM","SSL"]
+                        "G.S Mukarange Catholic":["SBM","SSL","Teacher"],
+                        "E.P Mukarange Protestant":["SBM","SSL","Teacher"],
+                        "E.P Nyabubare":["SBM","SSL","Teacher"],
+                        "E.P Mburabuturo":["SBM","SSL","Teacher"],
+                        "E.P Gisubizo":["SBM","SSL","Teacher"],
+                        "G.S Kayonza":["SBM","SSL","Teacher"],
+                        "E.P Kabungo":["SBM","SSL","Teacher"]
                     },
                     "Mwiri":{
-                        "G.S Nyawera":["SBM","SSL"],
-                        "E.P Nyakabungo":["SBM","SSL"],
-                        "G.S Migera":["SBM","SSL"]
-                        
+                        "G.S Nyawera":["SBM","SSL","Teacher"],
+                        "E.P Nyakabungo":["SBM","SSL","Teacher"],
+                        "G.S Migera":["SBM","SSL","Teacher"],
+                        "E.P Gasarabwayi":["SBM","SSL","Teacher"],
+                        "G.S Nyamugali":["SBM","SSL","Teacher"],
+                        "E.P Rugeyo":["SBM","SSL","Teacher"],
+                        "G.S Rwisirabo":["SBM","SSL","Teacher"],
+                        "E.P Kageyo":["SBM","SSL","Teacher"],
+                        "E.P Gitega":["SBM","SSL","Teacher"]
                     },
                     "Nyamirama":{
-                        "E.P Shyogo":["SBM","SSL"],
-                        "G.S Rutare":["SBM","SSL"],
-                        "E.P Nyamirama":["SBM","SSL"]
+                        "E.P Shyogo":["SBM","SSL","Teacher"],
+                        "G.S Rutare":["SBM","SSL","Teacher"],
+                        "E.P Nyamirama":["SBM","SSL","Teacher"],
+                        "E.P Rugendabali":["SBM","SSL","Teacher"],
+                        "E.P Nyamirama ADEPR":["SBM","SSL","Teacher"],
+                        "G.S Nyagasambu":["SBM","SSL","Teacher"],
+                        "G.S Icyizere":["SBM","SSL","Teacher"],
+                        "E.P Nyarunazi":["SBM","SSL","Teacher"],
+                        "G.S Gikaya":["SBM","SSL","Teacher"],
+                        "E.P Indatwa":["SBM","SSL","Teacher"]
                     }
                 }
                 window.onload = function(){

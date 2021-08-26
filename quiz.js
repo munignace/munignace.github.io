@@ -44,7 +44,8 @@ function check()
   if (q18=="Strongly Disagree") {c++}
   if (q19=="Strongly Agree") {c++}
   if (q20=="Strongly Agree") {c++}
-  document.write("<h1 style='color:  blue;'>You got"+"\n"+c+"/20"+ "\n"+"Keep it up!<h1>");
+  document.write("<h1 style='color: blue;'>You got"+"\n"+c+"/20");
+  document.write("<h1 style='color: green;'>Practice makes perfect!");
   document.write("<hr/>");
   document.write("<img src='images.png'/>")
 }
